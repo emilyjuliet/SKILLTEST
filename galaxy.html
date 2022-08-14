@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+<style>
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+    </style>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    
+    <title>End of day stock prices</title>
+    
+    <!-- Chart.js import -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <!-- Bootstrap core CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Bootstrap core JS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+
+  </head>
+
+  <div class="card mb-3">
+  <div class="card-header">
+    <a href="index.html" class="previous round">&#8249;</a>
+    GALAXY CONSOLIDATED FINANCE LTD. EOD PRICE
+  </div>
+</div>
+
+<canvas id="myChart" width="600" height="200"></canvas>
+<script>
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['1995-09-14', '1995-09-22', '1995-09-29', '1995-10-04', '1995-10-05', '1995-10-06', '1995-10-09', '1995-10-10', '1995-10-11', '1995-10-12', '1995-10-13', '1995-10-16', '1995-10-17', '1995-10-18', '1995-10-19', '1995-10-20', '1995-10-26', '1995-11-02', '1995-11-03', '1995-11-08', '1995-11-09', '1995-11-13', '1995-11-14', '1996-03-29', '1996-04-03', '1996-04-04', '1996-06-10', '1999-10-12', '1999-12-13', '1999-12-15', '1999-12-16', '1999-12-17', '1999-12-20', '1999-12-22', '1999-12-24', '2015-06-23'],
+        datasets: [{
+            label: 'Stock Prices',
+            data: [2.00, 2.75, 3.50, 4.75, 7.00, 10.25,13.25, 19,75, 22.75, 19.75, 18.75, 13.00, 12.50, 8.50, 8.50, 9.75,7.00, 8.00, 4.50, 6.00, 6.50, 6.50, 7.00, 6.00, 4.25, 3.00, 3.00, 2.25, 2.50, 4.50, 4.90, 4.00, 2.50, 2.75, 4.00, 2.05, 2.15  ],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
